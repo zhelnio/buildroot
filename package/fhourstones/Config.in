@@ -1,0 +1,7 @@
+config BR2_PACKAGE_FHOURSTONES
+	bool "fhourstones"
+	help
+	  Fhourstones benchmark by John Tromp. This integer benchmark solves
+		positions in the game of connect-4, as played on a vertical 7x6 board.
+
+	  https://tromp.github.io/c4/fhour.html
