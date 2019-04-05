@@ -1,0 +1,17 @@
+#!/bin/sh
+# based in hint/run.sh by Rajat Todi
+
+HINT_DATA=data
+mkdir -p $HINT_DATA
+
+date
+
+echo "Running for serial processor on different datatypes..."
+
+hint-double | tee $HINT_DATA/d1_out
+hint-int | tee $HINT_DATA/i1_out
+hint-short | tee $HINT_DATA/s1_out
+hint-float | tee $HINT_DATA/f1_out
+hint-longlong | tee $HINT_DATA/l1_out
+
+echo "FINISH FOR SERIAL"

@@ -1,0 +1,16 @@
+config BR2_PACKAGE_HINT_BENCHMARK
+	bool "hint-benchmark"
+	help
+	  The  HINT  performance analyzer.
+	  HINT reveals many aspects of computer performance: operation speed,
+	  precision, memory bandwidth, and usable memory size.  It is completely
+	  unlike conventional computer benchmarks.  HINT measures "QUIPS"
+	  (QUality Improvement Per Second) as a function of time.  "Net QUIPS" is a
+	  single number that summarizes the QUIPS over time.  This file explains how
+	  to run HINT, how parameters may be adjusted, and what may NOT be adjusted.
+	  The faster the computer, the greater the need for high precision, fast access,
+	  and large usable storage at all levels.  Unlike conventional benchmarks,
+	  shortcomings in any of these will be reflected in the figure of merit
+	  (Net QUIPS).
+
+	  https://web.archive.org/web/20180629134837/http://hint.byu.edu/
