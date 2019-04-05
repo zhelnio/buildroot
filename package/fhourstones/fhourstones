@@ -1,0 +1,2 @@
+#!/bin/sh
+SearchGame < /usr/share/fhourstones/inputs
