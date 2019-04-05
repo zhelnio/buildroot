@@ -1,0 +1,36 @@
+config BR2_PACKAGE_COREMARK
+	bool "coremark"
+	help
+	  coremark is an industry-standard benchmark that measures
+	  the performance of central processing units (CPU) and 
+	  embedded microcrontrollers (MCU)
+
+	  https://github.com/eembc/coremark
+
+if BR2_PACKAGE_COREMARK
+
+config BR2_PACKAGE_COREMARK_PORTDIR
+	string "platform"
+	default "linux"
+	help
+	  Directory in coremark sources which provides the platform
+	  dependend code. 'linux' and 'linux64' are provided by default
+
+config BR2_PACKAGE_COREMARK_ITERATIONS
+	string "benchmark iterations count"
+	default "10"
+	help
+	  It is recommended to set a specific number of iterations in certain situations e.g.:
+	  - Running with a simulator
+	  - Measuring power/energy
+	  - Timing cannot be restarted
+	  Minimum required run time:
+	    results are only valid for reporting if the benchmark ran for at least 10 secs!
+
+config BR2_PACKAGE_COREMARK_XCFLAGS
+	string "compiler flags"
+	default ""
+	help
+	  Use it to add compiler flags from the command line
+
+endif # BR2_PACKAGE_COREMARK
